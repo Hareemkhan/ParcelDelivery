@@ -23,60 +23,60 @@ public sealed class DeliveryCostCalculatorTests
     }
 
     [TestMethod]
-    public void CalculateCost_WithSmallParcel_ReturnsSmallPrice()
+    public void CalculateOrderCost_WithSmallParcel_ReturnsSmallPrice()
     {
         AssertCalculateCostForSize(ParcelSize.Small, 3.25m);
     }
 
     [TestMethod]
-    public void CalculateCost_WithMediumParcel_ReturnsMediumPrice()
+    public void CalculateOrderCost_WithMediumParcel_ReturnsMediumPrice()
     {
         AssertCalculateCostForSize(ParcelSize.Medium, 7.50m);
     }
 
     [TestMethod]
-    public void CalculateCost_WithLargeParcel_ReturnsLargePrice()
+    public void CalculateOrderCost_WithLargeParcel_ReturnsLargePrice()
     {
         AssertCalculateCostForSize(ParcelSize.Large, 12.75m);
     }
 
     [TestMethod]
-    public void CalculateCost_WithXLParcel_ReturnsXLPrice()
+    public void CalculateOrderCost_WithXLParcel_ReturnsXLPrice()
     {
         AssertCalculateCostForSize(ParcelSize.XL, 21.00m);
     }
 
     [TestMethod]
-    public void CalculateCost_WithInvalidParcelSize_ThrowsArgumentOutOfRangeException()
+    public void CalculateOrderCost_WithInvalidParcelSize_ThrowsArgumentOutOfRangeException()
     {
         var classifier = new FakeParcelClassifier { SizeToReturn = (ParcelSize)999 };
         var provider = new FakeDeliveryPricingProvider();
         var calculator = new DeliveryCostCalculator(classifier, provider);
 
         Assert.ThrowsExactly<ArgumentOutOfRangeException>(() =>
-            calculator.CalculateCost(new Parcel(1m, 1m, 1m)));
+            calculator.CalculateOrderCost(new[] { new Parcel(1m, 1m, 1m) }));
     }
 
     [TestMethod]
-    public void CalculateCost_WithNullParcel_ThrowsArgumentNullException()
+    public void CalculateOrderCost_WithNullParcel_ThrowsArgumentNullException()
     {
         var calculator = new DeliveryCostCalculator(
             new FakeParcelClassifier(),
             new FakeDeliveryPricingProvider());
 
         Assert.ThrowsExactly<ArgumentNullException>(() =>
-            calculator.CalculateCost(null!));
+            calculator.CalculateOrderCost(null!));
     }
 
     [TestMethod]
-    public void CalculateCost_WithNullPricingResult_ThrowsNullReferenceException()
+    public void CalculateOrderCost_WithNullPricingResult_ThrowsNullReferenceException()
     {
         var classifier = new FakeParcelClassifier { SizeToReturn = ParcelSize.Small };
         var provider = new FakeDeliveryPricingProvider { PricingToReturn = null };
         var calculator = new DeliveryCostCalculator(classifier, provider);
 
         Assert.ThrowsExactly<NullReferenceException>(() =>
-            calculator.CalculateCost(new Parcel(1m, 1m, 1m)));
+            calculator.CalculateOrderCost(new[] { new Parcel(1m, 1m, 1m) }));
     }
 
     [TestMethod]
@@ -89,7 +89,7 @@ public sealed class DeliveryCostCalculatorTests
 
         var result = calculator.CalculateOrderCost(Array.Empty<Parcel>());
 
-        Assert.AreEqual(0m, result);
+        Assert.AreEqual(0m, result.TotalDeliveryCost);
         Assert.AreEqual(0, classifier.CallCount);
     }
 
@@ -104,7 +104,7 @@ public sealed class DeliveryCostCalculatorTests
         var result = calculator.CalculateOrderCost(
             new[] { new Parcel(10m, 10m, 10m) });
 
-        Assert.AreEqual(7.50m, result);
+        Assert.AreEqual(7.50m, result.TotalDeliveryCost);
         Assert.AreEqual(1, classifier.CallCount);
     }
 
@@ -124,7 +124,7 @@ public sealed class DeliveryCostCalculatorTests
 
         var result = calculator.CalculateOrderCost(parcels);
 
-        Assert.AreEqual(31.75m, result);
+        Assert.AreEqual(31.75m, result.TotalDeliveryCost);
         Assert.AreEqual(3, classifier.CallCount);
         CollectionAssert.AreEquivalent(parcels, classifier.ClassifiedParcels);
     }
@@ -147,9 +147,9 @@ public sealed class DeliveryCostCalculatorTests
         var provider = new FakeDeliveryPricingProvider();
         var calculator = new DeliveryCostCalculator(classifier, provider);
 
-        var result = calculator.CalculateCost(parcel);
+        var result = calculator.CalculateOrderCost(new[] { parcel });
 
-        Assert.AreEqual(expected, result);
+        Assert.AreEqual(expected, result.Parcels.FirstOrDefault()?.DeliveryCost);
         Assert.AreEqual(1, classifier.CallCount);
         Assert.AreSame(parcel, classifier.LastParcel);
     }

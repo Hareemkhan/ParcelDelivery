@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ParcelDelivery")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee4f6aa1a6c9b38ec9dced064febc4c7d9bc8cd2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+caac8e1f804c4a5c606582f3ff5b3d451db8c89a")]
 [assembly: System.Reflection.AssemblyProductAttribute("ParcelDelivery")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ParcelDelivery")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -23,23 +23,6 @@ namespace ParcelDelivery.ParcelServices
                 throw new ArgumentNullException(nameof(pricingProvider));
         }
 
-        public decimal CalculateCost(Parcel parcel)
-        {
-            ArgumentNullException.ThrowIfNull(parcel);
-
-            var size = _classifier.Classify(parcel);
-            var pricing = _pricingProvider.GetPricing();
-
-            return size switch
-            {
-                ParcelSize.Small => pricing.Small,
-                ParcelSize.Medium => pricing.Medium,
-                ParcelSize.Large => pricing.Large,
-                ParcelSize.XL => pricing.XL,
-                _ => throw new ArgumentOutOfRangeException(nameof(size))
-            };
-        }
-
         public DeliveryQuote CalculateOrderCost(
             IEnumerable<Parcel> parcels, ShippingSpeed shippingSpeed = ShippingSpeed.Standard)
         {
@@ -76,7 +59,7 @@ namespace ParcelDelivery.ParcelServices
             // Speedy shipping is an additional order-level charge.
             var speedyCost = shippingSpeed == ShippingSpeed.Speedy
                 ? standardCost
-                : 0m;
+                : 0;
 
             // Calculate the final delivery cost.
             var totalCost = standardCost + speedyCost;

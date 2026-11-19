@@ -8,7 +8,6 @@ namespace ParcelDelivery.Interfaces
 {
     public interface IDeliveryCostCalculator
     {
-        decimal CalculateCost(Parcel parcel);
 
         DeliveryQuote CalculateOrderCost(
         IEnumerable<Parcel> parcels,
