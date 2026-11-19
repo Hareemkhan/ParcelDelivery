@@ -1,0 +1,14 @@
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\bin\Debug\net10.0\ParcelDelivery.deps.json
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\bin\Debug\net10.0\ParcelDelivery.dll
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\bin\Debug\net10.0\ParcelDelivery.pdb
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\obj\Debug\net10.0\ParcelDelivery.csproj.AssemblyReference.cache
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\obj\Debug\net10.0\ParcelDelivery.GeneratedMSBuildEditorConfig.editorconfig
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\obj\Debug\net10.0\ParcelDelivery.AssemblyInfoInputs.cache
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\obj\Debug\net10.0\ParcelDelivery.AssemblyInfo.cs
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\obj\Debug\net10.0\ParcelDelivery.csproj.CoreCompileInputs.cache
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\obj\Debug\net10.0\ParcelDelivery.dll
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\obj\Debug\net10.0\refint\ParcelDelivery.dll
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\obj\Debug\net10.0\ParcelDelivery.pdb
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\obj\Debug\net10.0\ref\ParcelDelivery.dll
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\obj\Debug\net10.0\ParcelDe.48237F3A.Up2Date
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\obj\Debug\net10.0\ParcelDelivery.sourcelink.json
