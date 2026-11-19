@@ -253,3 +253,9 @@ H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery.Tests\obj\Debug\net10.0\r
 H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery.Tests\obj\Debug\net10.0\ParcelDelivery.Tests.pdb
 H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery.Tests\obj\Debug\net10.0\ParcelDelivery.Tests.genruntimeconfig.cache
 H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery.Tests\obj\Debug\net10.0\ref\ParcelDelivery.Tests.dll
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery.Tests\bin\Debug\net10.0\.msCoverageExtensionSourceRootsMapping_ParcelDelivery.Tests
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery.Tests\bin\Debug\net10.0\.msCoverageSourceRootsMapping_ParcelDelivery.Tests
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery.Tests\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery.Tests\bin\Debug\net10.0\ParcelDelivery.dll
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery.Tests\bin\Debug\net10.0\ParcelDelivery.pdb
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery.Tests\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.dll
