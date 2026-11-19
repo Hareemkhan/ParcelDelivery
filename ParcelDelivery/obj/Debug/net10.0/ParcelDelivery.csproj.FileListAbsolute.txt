@@ -11,3 +11,4 @@ H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\obj\Debug\net10.0\refint\
 H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\obj\Debug\net10.0\ParcelDelivery.pdb
 H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\obj\Debug\net10.0\ref\ParcelDelivery.dll
 H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\obj\Debug\net10.0\ParcelDe.48237F3A.Up2Date
+H:\FirstAMLTechnicalTest\ParcelDelivery\ParcelDelivery\obj\Debug\net10.0\ParcelDelivery.sourcelink.json
